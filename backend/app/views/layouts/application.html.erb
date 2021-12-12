@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="main">
+      <%= react_component("NavigationBar") %>
+    </header>
+    <section>
+      <main class="<%= controller.controller_name %>">
+        <%= yield %>
+      </main>
+    </section>
   </body>
 </html>
