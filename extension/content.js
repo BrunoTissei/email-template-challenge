@@ -2,7 +2,7 @@ InboxSDK.load(2, 'APP_ID').then((sdk) => {
   sdk.Compose.registerComposeViewHandler((composeView) => {
     window.addEventListener("message", (event) => {
       if (event.data.message === "addTemplate") {
-        composeView.setBodyText(event.data.bodyText)
+        composeView.setBodyHTML(event.data.bodyText)
       }
     }, false)
 
